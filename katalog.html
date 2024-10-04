@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="asset/Katalog.css">
+    <title>Dunia Bumbu</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <h1>Dunia Bumbu</h1>
+    </div>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="Tentang Kami.html">Tentang Kami</a></li>
+            <li><a href="Kontak.html">Kontak</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="floating-cart-container">
+      <button id="cart-status" class="cart-button">0 <i class="fas fa-shopping-cart"></i></button>
+  </div>
+
+    <!-- ISI -->
+    <section class="item">
+        <section class="product-category" id="kain">
+          <h2>Bumbu Sate</h2>
+          <br>
+          <div class="products">
+            <div class="product">
+              <img src="asset/Bumbu.png">
+              <h3>Bumbu Sate 1</h3>
+              <p>Rp. 60.000</p>
+              <button class="add-to-cart-btn" data-name="Bumbu Sate 1" data-price="60000" data-image="asset/Bumbu.png"><i class="fas fa-shopping-cart"></i></button>
+            </div>          
+             <!-- Baguuan Udeng Lembaran -->
+          </div>
+        </section>
+      
+        <section class="product-category" id="other-products">
+          <h2>Bumbu Rendang</h2>
+          <br>
+          <div class="products">
+            <div class="product">
+              <img src="asset/Bumbu.png">
+              <h3>Bumbu Rendang 1</h3>
+              <p>Rp. 40.000</p>
+              <button class="add-to-cart-btn" data-name="Bumbu Rendang 1" data-price="40000" data-image="asset/Bumbu.png"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <!-- Bagian Udeng Setengah Jadi -->
+          </div>
+        </section>
+      </section>
+  
+      <section class="item">
+        <section class="product-category" id="kain">
+          <h2>Bumbu Pedas</h2>
+          <br>
+          <div class="products">
+            <div class="product">
+              <img src="asset/Bumbu.png">
+              <h3>Bumbu Pedas 1</h3>
+              <p>Rp. 400.000</p>
+              <button class="add-to-cart-btn" data-name="Bumbu Pedas 1" data-price="400000" data-image="asset/Bumbu.png"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <!-- Bagian Kamen -->
+          </div>
+        </section>
+      
+        <section class="product-category" id="other-products">
+          <h2>Bumbu Gulai</h2>
+          <br>
+          <div class="products">
+            <div class="product">
+              <img src="asset/Bumbu.png">
+              <h3>Bumbu Gulai 1</h3>
+              <p>Rp. 160.000</p>
+              <button class="add-to-cart-btn" data-name="Bumbu Gulai 1" data-price="160000" data-image="asset/Bumbu.png"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <!-- Bagian Saput -->
+          </div>
+        </section>
+      </section>
+
+      <section class="item">
+        <section class="product-category-sisa" id="sisa">
+          <h2>Produk Lain</h2>
+          <br>
+          <div class="products">
+            <div class="product">
+              <img src="asset/Bumbu.png">
+              <h3>Bumbu Spesial</h3>
+              <p>Rp. 120.000</p>
+              <button class="add-to-cart-btn" data-name="Bumbu Spesial" data-price="120000" data-image="asset/Bumbu.png"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+            <!-- Lagi? -->
+          </div>
+        </section>
+      </section>
+    <!-- ISI -->
+
+    <!-- Cart Pop-up Window -->
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Keranjang</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: Rp. 0</p>
+        <button id="checkout-btn">Pesan Sekarang</button>
+        </div>
+    </div>
+    
+  <!-- footer -->
+  <footer>
+    <div class="logo1">
+        <h1>Dunia Bumbu</h1>
+    </div>
+    <div class="footer-section nav-section">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Tentang Kami.html">Tentang Kami</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer-section social-media-section">
+        <a href="https://www.tiktok.com/@madewcfmo7n?_t=8pFHoxcq2Ex&_r=1" target="_blank" class="social-icon">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/+6288703293943" target="_blank" class="social-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/sarisana_udengbali/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+  <!-- footer -->
+   
+<script src="asset/Katalog.jsx"></script>
+
+</body>

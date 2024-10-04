@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Mulai dengan opacity 0 untuk efek loading */
+    transition: opacity 0.2s ease; /* Transisi untuk efek muncul */
+}
+
+body.loaded {
+    opacity: 1; /* Setelah kelas 'loaded' ditambahkan, ubah opacity ke 1 */
+}
+
+/* Styling Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px */
+    background-color: #ff6347; /* Warna background untuk header */
+    color: white;
+}
+
+/* Styling untuk Logo */
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem; /* 24px */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling Navigation */
+nav ul.nav-list {
+    list-style: none; /* Menghilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Supaya item navigasi berjejer secara horizontal */
+}
+
+nav ul.nav-list li {
+    margin-left: 1.25rem; /* 20px */
+}
+
+nav ul.nav-list li a {
+    text-decoration: none;
+    color: white; /* Warna teks link */
+    font-size: 1.125rem; /* 18px */
+    font-family: 'Arial', sans-serif;
+    padding: 0.625rem; /* 10px */
+}
+
+nav ul.nav-list li a:hover {
+    background-color: #ff4500; /* Warna saat dihover */
+    border-radius: 0.3125rem; /* 5px */
+    transition: 0.3s ease-in-out;
+
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 48em) { /* 768px */
+    header {
+        flex-direction: column; /* Buat header stack secara vertikal di layar lebih kecil */
+        text-align: center;
+    }
+    
+    nav ul.nav-list {
+        flex-direction: column; /* Susunan navigasi vertikal */
+    }
+    
+    nav ul.nav-list li {
+        margin: 0.625rem 0; /* 10px */
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+#kontak {
+    max-width: 800px;
+    margin: 0 auto; /* Pusatkan halaman */
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info, .contact-form, .map {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 15px 0;
+    padding: 15px;
+}
+
+.contact-info h3, .contact-form h3, .map h3 {
+    margin-top: 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #ff6600; /* Warna tombol */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #e65c00; /* Warna tombol saat hover */
+}
+
+.map {
+    text-align: center; /* Pusatkan peta */
+}
+
+.map iframe {
+    max-width: 100%; /* Responsif */
+}
+
+
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 240px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    padding: 0; /* Menghilangkan padding untuk membuat ikon memenuhi */
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+    z-index: 1000; /* Pastikan popup di atas konten lainnya */
+    display: flex; /* Menggunakan flexbox untuk pemusatan */
+    justify-content: center; /* Pusatkan ikon secara horizontal */
+    align-items: center; /* Pusatkan ikon secara vertikal */
+}
+
+.popup:hover {
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+.popup i {
+    transition: 0.5s ease-in;
+    color: #ff6600;
+    font-size: 50px; /* Ukuran ikon, lebih besar untuk memenuhi popup */
+    margin: 0; /* Menghilangkan margin */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px; /* Mengurangi padding untuk tampilan kecil */
+    }
+
+    #kontak {
+        max-width: 100%; /* Mengatur lebar menjadi 100% untuk tampilan kecil */
+        padding: 15px; /* Mengurangi padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk judul */
+    }
+
+    .contact-info, .contact-form, .map {
+        padding: 10px; /* Mengurangi padding */
+        margin: 10px 0; /* Mengurangi margin */
+    }
+
+    .contact-form label {
+        margin-top: 5px; /* Mengurangi jarak atas label */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px; /* Mengurangi padding */
+        margin-top: 3px; /* Mengurangi jarak atas */
+    }
+
+    .contact-form button {
+        padding: 8px 12px; /* Mengurangi padding tombol */
+    }
+
+    .map iframe {
+        height: 200px; /* Mengatur tinggi iframe untuk tampilan kecil */
+    }
+
+    .popup {
+        bottom: 400px; /* Menyesuaikan jarak dari bawah untuk tampilan kecil */
+        right: 10px; /* Menyesuaikan jarak dari kanan untuk tampilan kecil */
+    }
+
+    .popup i {
+        font-size: 40px; /* Mengurangi ukuran ikon untuk tampilan kecil */
+    }
+
+}
+
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(to right, #ffb380, #ffcc80);
+    border-top: 1px solid #ccc;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo1 {
+    text-align: center;
+}
+
+.nav-section {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f9a368;
+}
+
+.social-media-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f9a368;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        align-items: flex-start;
+    }
+
+    .nav-section {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .social-media-section {
+        justify-content: center;
+    }
+}
+/* Footer */

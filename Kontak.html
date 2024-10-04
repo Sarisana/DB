@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Tentang Kami - Dunia Bumbu</title>
+    <link rel="stylesheet" href="asset/Kontak.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Dunia Bumbu</h1>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Tentang Kami.html">Tentang Kami</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="kontak">
+            <h2>Kontak Kami</h2>
+        
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Telepon:</strong> +6281353791264</p>
+                <p><strong>Email:</strong> info@duniabumbu.com</p>
+                <p><strong>Alamat:</strong> Jl. Babarsari No.6, Janti, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+            </div>
+        
+            <div class="contact-form">
+                <h3>Formulir Kontak</h3>
+                <form id="contactForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit" id="sendMessage" onclick="sendToWhatsApp()">Kirim Pesan</button>
+                </form>
+            </div>
+        
+            <div class="map">
+                <h3>Peta Lokasi</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0876855624447!2d110.41223517589573!3d-7.780527292239144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59f02d398d5f%3A0x2160d0e3acadd50!2sAtma%20Jaya%20University%20Yogyakarta%20-%20Campus%204%20Theresa%20Building!5e0!3m2!1sen!2sid!4v1728008087381!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        
+        <div id="scrollToTopPopup" class="popup" style="display: none;">
+            <i class="far fa-arrow-alt-circle-up"></i>
+        </div>
+        
+        <div id="scrollToTopPopup" class="popup" style="display: none;">
+            <i class="far fa-arrow-alt-circle-up"></i>
+        </div>
+
+    </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="logo1">
+        <h1>Dunia Bumbu</h1>
+    </div>
+    <div class="footer-section nav-section">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Tentang Kami.html">Tentang Kami</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer-section social-media-section">
+        <a href="https://www.tiktok.com/@madewcfmo7n?_t=8pFHoxcq2Ex&_r=1" target="_blank" class="social-icon">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/+6288703293943" target="_blank" class="social-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/sarisana_udengbali/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+  <!-- footer -->
+
+
+    <script src="asset/Kontak.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 0; /* Mulai dengan opacity 0 untuk efek loading */
+    transition: opacity 0.2s ease; /* Transisi untuk efek muncul */
+}
+
+body.loaded {
+    opacity: 1; /* Setelah kelas 'loaded' ditambahkan, ubah opacity ke 1 */
+}
+
+
+/* Styling Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px */
+    background-color: #ff6347; /* Warna background untuk header */
+    color: white;
+}
+
+/* Styling untuk Logo */
+header .logo h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem; /* 24px */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling Navigation */
+nav ul.nav-list {
+    list-style: none; /* Menghilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Supaya item navigasi berjejer secara horizontal */
+}
+
+nav ul.nav-list li {
+    margin-left: 1.25rem; /* 20px */
+}
+
+nav ul.nav-list li a {
+    text-decoration: none;
+    color: white; /* Warna teks link */
+    font-size: 1.125rem; /* 18px */
+    font-family: 'Arial', sans-serif;
+    padding: 0.625rem; /* 10px */
+}
+
+nav ul.nav-list li a:hover {
+    background-color: #ff4500; /* Warna saat dihover */
+    border-radius: 0.3125rem; /* 5px */
+    transition: 0.3s ease-in-out;
+
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 48em) { /* 768px */
+    header {
+        flex-direction: column; /* Buat header stack secara vertikal di layar lebih kecil */
+        text-align: center;
+    }
+    
+    nav ul.nav-list {
+        flex-direction: column; /* Susunan navigasi vertikal */
+    }
+    
+    nav ul.nav-list li {
+        margin: 0.625rem 0; /* 10px */
+    }
+}
+/* HEADER */
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.tim-member {
+    background-color: #f1f1f1;
+    border-left: 5px solid #ff6600;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#tim-kami {
+    text-align: center; /* Menempatkan teks di tengah */
+    margin: 30px 0; /* Jarak atas dan bawah */
+}
+
+.tim-container {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-wrap: wrap; /* Mengizinkan anggota tim membungkus ke baris baru */
+    justify-content: center; /* Mengatur anggota tim agar berada di tengah */
+}
+
+.tim-member {
+    background-color: #f1f1f1;
+    border-left: 5px solid #ff6600;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 250px; /* Lebar tetap untuk anggota tim */
+    display: flex; /* Mengatur flexbox untuk setiap anggota */
+    flex-direction: column; /* Mengatur gambar dan teks dalam kolom */
+    align-items: center; /* Mengatur agar konten berada di tengah */
+}
+
+.tim-member img {
+    width: 100px; /* Lebar gambar */
+    height: 100px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    margin-bottom: 10px; /* Jarak bawah gambar */
+}
+
+/* Mengatur posisi anggota tim */
+.left {
+    order: -1; /* Mengatur urutan anggota tim */
+}
+
+.right {
+    order: 1; /* Mengatur urutan anggota tim */
+}
+
+h3 {
+    margin: 0;
+    color: #ff6600;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Tambahan untuk Sejarah dan Visi & Misi */
+.sejarah, .visi-misi {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Tambahkan border untuk memisahkan section */
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.visi-misi {
+    text-align: center;
+}
+
+.misi {
+    overflow-x: hidden;
+    transform: translatex(33em);
+    text-align: justify;
+}
+
+.sejarah h2, .visi-misi h2 {
+    margin-bottom: 10px;
+    color: #ff6600; /* Warna judul */
+}
+
+.sejarah p, .visi-misi p {
+    line-height: 1.8; /* Menambah jarak antar baris untuk kenyamanan membaca */
+    margin-bottom: 15px; /* Jarak antar paragraf */
+}
+
+.sejarah h1 {
+    color: #2c3e50;
+}
+
+.sejarah p {
+    margin-bottom: 20px;
+    text-indent: 2em; /* Menambahkan indentasi pada awal paragraf */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px; /* Mengurangi padding untuk tampilan kecil */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Mengurangi ukuran font untuk judul */
+    }
+
+    section {
+        padding: 15px; /* Mengurangi padding di section */
+    }
+
+    #tim-kami {
+        margin: 20px 0; /* Mengurangi margin atas dan bawah */
+    }
+
+    .tim-container {
+        flex-direction: column; /* Mengubah arah menjadi kolom untuk tampilan kecil */
+        align-items: center; /* Menempatkan anggota tim di tengah */
+    }
+
+    .tim-member {
+        width: 80%; /* Mengatur lebar anggota tim agar responsif */
+        margin: 10px 0; /* Mengurangi margin horizontal */
+    }
+
+    .tim-member img {
+        width: 80px; /* Mengurangi ukuran gambar untuk tampilan kecil */
+        height: 80px; /* Mengurangi tinggi gambar */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Mengurangi ukuran font untuk nama anggota tim */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Mengurangi ukuran font footer */
+    }
+
+    /* Tambahan untuk Sejarah dan Visi & Misi */
+    .sejarah, .visi-misi {
+        margin-top: 15px; /* Mengurangi margin atas */
+        padding: 15px; /* Mengurangi padding */
+    }
+
+    .sejarah h2, .visi-misi h2 {
+        font-size: 1.3rem; /* Mengurangi ukuran font untuk judul sejarah dan visi & misi */
+    }
+
+    .sejarah p, .visi-misi p {
+        font-size: 0.9rem; /* Mengurangi ukuran font paragraf */
+        margin-bottom: 10px; /* Mengurangi margin bawah paragraf */
+    }
+}
+
+
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 240px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    padding: 0; /* Menghilangkan padding untuk membuat ikon memenuhi */
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+    z-index: 1000; /* Pastikan popup di atas konten lainnya */
+    display: flex; /* Menggunakan flexbox untuk pemusatan */
+    justify-content: center; /* Pusatkan ikon secara horizontal */
+    align-items: center; /* Pusatkan ikon secara vertikal */
+}
+
+.popup:hover {
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+.popup i {
+    transition: 0.5s ease-in;
+    color: #ff6600;
+    font-size: 50px; /* Ukuran ikon, lebih besar untuk memenuhi popup */
+    margin: 0; /* Menghilangkan margin */
+}
+
+@media (max-width: 768px) {
+    .popup {
+        bottom: 400px; /* Menyesuaikan jarak dari bawah untuk tampilan kecil */
+        right: 10px; /* Menyesuaikan jarak dari kanan untuk tampilan kecil */
+    }
+
+    .popup i {
+        font-size: 40px; /* Mengurangi ukuran ikon untuk tampilan kecil */
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(to right, #ffb380, #ffcc80);
+    border-top: 1px solid #ccc;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo1 {
+    text-align: center;
+}
+
+.nav-section {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f9a368;
+}
+
+.social-media-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f9a368;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        align-items: flex-start;
+    }
+
+    .nav-section {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .social-media-section {
+        justify-content: center;
+    }
+}
+/* Footer */
+

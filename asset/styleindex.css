@@ -1,0 +1,431 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 0; /* Mulai dengan opacity 0 untuk efek loading */
+    transition: opacity 0.2s ease; /* Transisi untuk efek muncul */
+}
+
+body.loaded {
+    opacity: 1; /* Setelah kelas 'loaded' ditambahkan, ubah opacity ke 1 */
+}
+
+
+/* Styling Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem; /* 20px */
+    background-color: #ff6347; /* Warna background untuk header */
+    color: white;
+}
+
+/* Styling untuk Logo */
+header .logo h1 {
+    margin: 0;
+    font-size: 1.5rem; /* 24px */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling Navigation */
+nav ul.nav-list {
+    list-style: none; /* Menghilangkan bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Supaya item navigasi berjejer secara horizontal */
+}
+
+nav ul.nav-list li {
+    margin-left: 1.25rem; /* 20px */
+}
+
+nav ul.nav-list li a {
+    text-decoration: none;
+    color: white; /* Warna teks link */
+    font-size: 1.125rem; /* 18px */
+    font-family: 'Arial', sans-serif;
+    padding: 0.625rem; /* 10px */
+}
+
+nav ul.nav-list li a:hover {
+    background-color: #ff4500; /* Warna saat dihover */
+    border-radius: 0.3125rem; /* 5px */
+    transition: 0.3s ease-in-out;
+
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 48em) { /* 768px */
+    header {
+        flex-direction: column; /* Buat header stack secara vertikal di layar lebih kecil */
+        text-align: center;
+    }
+    
+    nav ul.nav-list {
+        flex-direction: column; /* Susunan navigasi vertikal */
+    }
+    
+    nav ul.nav-list li {
+        margin: 0.625rem 0; /* 10px */
+    }
+}
+
+main {
+    padding: 1.25rem; /* 20px */
+}
+
+h2 {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 0.9375rem; /* 15px */
+}
+
+/* Produk Unggulan */
+#produk-unggulan {
+    background-color: white;
+    padding: 2.5rem; /* 40px */
+    margin-top: 1.875rem; /* 30px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#produk-unggulan h2 {
+    text-align: center;
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.produk {
+    display: flex;
+    justify-content: space-between;
+}
+
+.produk-item {
+    background-color: #fff;
+    padding: 0.9375rem; /* 15px */
+    border-radius: 0.5rem; /* 8px */
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+.produk-item img {
+    max-width: 100%;
+    border-radius: 0.5rem; /* 8px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.produk-item h3 {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+/* artikel */
+.artikel-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Supaya item dapat membungkus jika layar kecil */
+}
+
+.artikel-item {
+    background-color: #fff; /* Warna latar belakang default */
+    padding: 1rem; /* 16px */
+    margin: 0.625rem; /* 10px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* 4 item dalam satu baris dengan margin */
+    text-align: left;
+    background-size: cover; /* Menutup area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    color: white; /* Warna teks yang kontras dengan gambar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artikel-item img {
+    display: none; /* Sembunyikan gambar, karena kita menggunakan background */
+}
+
+.artikel-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+.artikel-item h3 {
+    font-size: 1rem; /* 16px */
+    margin-bottom: 0.5rem; /* 8px */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Menambahkan bayangan pada teks */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.625rem; /* 10px */
+    padding: 0.5rem 1rem; /* 8px 16px */
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem; /* 4px */
+}
+
+.read-more:hover {
+    background-color: #ff4500; /* Warna saat dihover */
+    transition: 0.3s ease-in-out;
+}
+
+/* Tambahkan background-image menggunakan JavaScript */
+
+
+
+
+
+/* Styling untuk Testimoni */
+#testimoni {
+    background-color: #f1f1f1;
+    padding: 2.5rem; /* 40px */
+    margin-top: 1.875rem; /* 30px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+#testimoni h2 {
+    text-align: center;
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+#testimoni h3 {
+    text-align: center;
+    font-size: 1.5rem; /* 24px */
+    margin-top: 1.875rem; /* 30px */
+}
+
+#testimoni-list {
+    max-width: 50rem; /* 800px */
+    margin: 0 auto;
+}
+
+.testimoni-item {
+    background-color: #fff;
+    padding: 0.9375rem; /* 15px */
+    margin-bottom: 0.9375rem; /* 15px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+#testimoni-form {
+    max-width: 37.5rem; /* 600px */
+    margin: 1.25rem auto; /* 20px */
+    background-color: #fff;
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+#testimoni-form input,
+#testimoni-form textarea {
+    width: 100%;
+    padding: 0.625rem; /* 10px */
+    margin-bottom: 0.625rem; /* 10px */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 4px */
+}
+
+#testimoni-form button {
+    background-color: #ff6347;
+    color: white;
+    padding: 0.625rem; /* 10px */
+    border: none;
+    border-radius: 0.25rem; /* 4px */
+    cursor: pointer;
+    width: 100%;
+}
+
+#testimoni-form button:hover {
+    background-color: #ff4500;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 240px; /* Jarak dari bawah */
+    right: 20px; /* Jarak dari kanan */
+    padding: 0; /* Menghilangkan padding untuk membuat ikon memenuhi */
+    border-radius: 50%; /* Bentuk bulat */
+    cursor: pointer; /* Menunjukkan bahwa ini dapat diklik */
+    z-index: 1000; /* Pastikan popup di atas konten lainnya */
+    display: flex; /* Menggunakan flexbox untuk pemusatan */
+    justify-content: center; /* Pusatkan ikon secara horizontal */
+    align-items: center; /* Pusatkan ikon secara vertikal */
+}
+
+.popup:hover {
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+.popup i {
+    transition: 0.5s ease-in;
+    color: #ff6600;
+    font-size: 50px; /* Ukuran ikon, lebih besar untuk memenuhi popup */
+    margin: 0; /* Menghilangkan margin */
+}
+
+@media (max-width: 768px) {
+    /* Produk Unggulan */
+    .produk {
+        flex-direction: column; /* Mengubah menjadi kolom untuk tampilan kecil */
+        align-items: center; /* Pusatkan item */
+    }
+
+    .produk-item {
+        width: 100%; /* Mengatur lebar item menjadi penuh */
+        margin-bottom: 1rem; /* Jarak antara item */
+    }
+
+    /* Artikel */
+    .artikel-list {
+        flex-direction: column; /* Mengubah menjadi kolom untuk tampilan kecil */
+        align-items: center; /* Pusatkan item */
+        padding: -3rem 1rem; /* Tambahkan padding samping */
+    }
+
+    .artikel-item {
+        width: 90%; /* Mengatur lebar item menjadi penuh */
+        margin-bottom: 1rem; /* Jarak antara item */
+        text-align: center; /* Pusatkan teks */
+        transform: translateX(-1rem);
+    }
+
+    /* Styling untuk Testimoni */
+    #testimoni {
+        padding: 1.25rem; /* Mengurangi padding untuk tampilan kecil */
+    }
+
+    #testimoni-list {
+        flex-direction: column; /* Mengubah menjadi kolom untuk tampilan kecil */
+        align-items: center; /* Pusatkan item */
+    }
+
+    .testimoni-item {
+        width: 90%; /* Mengatur lebar item testimoni menjadi 90% */
+        margin-bottom: 1rem; /* Jarak antara item testimoni */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    #testimoni-form {
+        width: 80%; /* Mengatur lebar form testimoni menjadi 90% */
+        margin: 1rem auto; /* Jarak atas dan bawah */
+    }
+
+        /* POPUP */
+        .popup {
+            bottom: 400px; /* Menyesuaikan jarak dari bawah untuk tampilan kecil */
+            right: 10px; /* Menyesuaikan jarak dari kanan untuk tampilan kecil */
+        }
+    
+        .popup i {
+            font-size: 40px; /* Mengurangi ukuran ikon untuk tampilan kecil */
+        }
+}
+
+
+/* Footer */
+footer {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(to right, #ffb380, #ffcc80);
+    border-top: 1px solid #ccc;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo1 {
+    text-align: center;
+}
+
+.nav-section {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    text-align: center;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f9a368;
+}
+
+.social-media-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f9a368;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        align-items: flex-start;
+    }
+
+    .nav-section {
+        margin-top: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .social-media-section {
+        justify-content: center;
+    }
+}
+/* Footer */
+
